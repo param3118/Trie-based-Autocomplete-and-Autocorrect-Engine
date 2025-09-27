@@ -1,5 +1,5 @@
-Trie-Based Autocomplete & Autocorrect Engine
-📌 Project Overview
+### Trie-Based Autocomplete & Autocorrect Engine
+#### 📌 Project Overview
 
 This project is an implementation of a dictionary engine using a Trie data structure in C.
 It supports:
@@ -16,46 +16,39 @@ It supports:
 
 The engine reads a dictionary file (dict.txt), processes queries from an input file (input.txt), and writes results to output.txt.
 
-⚙️ Features
-
-Add Word
+### ⚙️ Features
+🔹 **Add Word**
 
 Inserts a new word into the Trie.
 
-Delete Word
+🔹**Delete Word**
 
 Removes a word from the Trie if it exists.
 
-Spell Check
+🔹**Spell Check**
 
-Checks if a word exists in the dictionary.
+Checks whether a word exists in the dictionary.
+If found, its usage rank is updated.
 
-Updates the word’s usage rank if found.
+🔹 **Autocomplete**
 
-Autocomplete
+Suggests dictionary words that start with a given prefix.
+Suggestions are sorted by:
 
-Suggests words from the dictionary based on a given prefix.
+>Word rank (frequency of use)
 
-Words are sorted by rank and lexicographical order.
+>Lexicographical order
 
-Autocorrect
+🔹 **Autocorrect**
 
-Suggests the closest matching word using Levenshtein distance (edit distance ≤ 3).
+Suggests the closest matching word using Levenshtein distance (maximum distance ≤ 3).
 
-Concatenation Check
+🔹Concatenation Check
 
-Verifies if a word can be formed by concatenating two or more dictionary words.
-
-📂 Project Structure
-📦 Trie-Autocomplete-Autocorrect
- ┣ 📜 main.c              # Main C source code
- ┣ 📜 dict.txt            # Dictionary words (input for Trie)
- ┣ 📜 input.txt           # Query inputs
- ┣ 📜 output.txt          # Results of queries
- ┣ 📜 README.md           # Documentation
+Checks if a word can be formed by concatenating two or more valid dictionary words.
 
 
-📄 File Descriptions
+###  📄 File Descriptions
 
 dict.txt → Contains the dictionary words (one word per line).
 
@@ -76,8 +69,8 @@ word = input word/prefix for the operation
 
 output.txt → Contains the results of each query.
 
-🔢 Query Types
-Code	Operation	Example Input	Example Output
+### 🔢 Query Types
+**Code	Operation	Example Input	Example Output**
 1	Add Word	1 hello	(word added, no output)
 2	Delete Word	2 hello	Deleted.
 3	Spell Check	3 world	1- spell check
@@ -102,7 +95,7 @@ Process queries from input.txt
 
 Write results into output.txt
 
-📘 Example
+###  📘 Example
 dict.txt
 hello
 help
@@ -133,7 +126,7 @@ Deleted.
 helium
 help
 
-📊 Data Structures Used
+### 📊 Data Structures Used
 
 TrieNode
 
@@ -151,17 +144,17 @@ typedef struct WordRank {
     int rank;
 } WordRank;
 
-📚 Algorithms Used
+### 📚 Algorithms Used
 
-Trie Traversal → For insertion, deletion, and search.
+**Trie Traversal** → For insertion, deletion, and search.
 
-Levenshtein Distance → For autocorrect.
+**Levenshtein Distance **→ For autocorrect.
 
-Dynamic Programming (DP) → For concatenation check.
+**Dynamic Programming (DP)** → For concatenation check.
 
-Sorting (qsort) → For ranked autocomplete suggestions.
+**Sorting (qsort)**→ For ranked autocomplete suggestions.
 
-🚀 Future Improvements
+###  🚀 Future Improvements
 
 Support uppercase words automatically (case-insensitive).
 
@@ -171,7 +164,7 @@ Add frequency-based learning from user history.
 
 Allow returning unlimited autocomplete results instead of a fixed MAX_OUTPUT_WORDS.
 
-👨‍💻 Author
+###  👨‍💻 Author
 
 Paramjeet Singh
 M.Tech Student, IIT Kharagpur (CSE)
