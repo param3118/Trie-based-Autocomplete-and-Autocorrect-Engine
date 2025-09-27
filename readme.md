@@ -1,7 +1,7 @@
 ### Trie-Based Autocomplete & Autocorrect Engine
 #### 📌 Project Overview
 
-This project is an implementation of a dictionary engine using a Trie data structure in C.
+This project is an implementation of a dictionary engine using a Trie data structure in C++.
 It supports:
 
 ✅ Word insertion & deletion
@@ -168,4 +168,3 @@ Allow returning unlimited autocomplete results instead of a fixed MAX_OUTPUT_WOR
 
 Paramjeet Singh
 M.Tech Student, IIT Kharagpur (CSE)
-Passionate about algorithms, ML, and full-stack development.
